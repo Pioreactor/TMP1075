@@ -10,12 +10,12 @@ class TMP1075:
 
     """
 
-    def __init__(self, address=0x4f):
+    def __init__(self, address: int=0x4f):
         # Could check that addr is one of the valid values...
         comm_port = busio.I2C(board.SCL, board.SDA)
         self.i2c = I2CDevice(comm_port, address)
 
-    def get_temperature(self):
+    def get_temperature(self) -> float:
         b = bytearray(2)
         self.i2c.readinto(b)
         return ((b[0] << 4) + (b[1] >> 4)) * 0.0625
