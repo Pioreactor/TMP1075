@@ -7,7 +7,7 @@ with open("README.md") as f:
 
 
 setup(name='TMP1075',
-      version='0.2.0',
+      version='0.2.1',
       description='A python wrapper for interacting with the TMP1075',
       author='Cam Davidson-Pilon',
       author_email='cam@pioreactor.com',
