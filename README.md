@@ -9,5 +9,7 @@ Currently only supports querying of the temperature.
 from TMP1075 import TMP1075
 
 tmp = TMP1075()
-tmp.get_temperature()
+print(tmp.get_temperature())
+# or
+print(tmp.temperature)
 ```
